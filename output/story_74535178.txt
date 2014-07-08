@@ -1,0 +1,13 @@
+exercisedb=# select sum (orders.amount)
+from orders
+join customers
+on customers.id=orders.customer_id
+join orderitems
+on orders.id=orderitems.order_id
+join items
+on items.id=orderitems.item_id
+where items.id = 6;
+  sum
+--------
+ 789.05
+(1 row)
